@@ -132,7 +132,7 @@ async def answer(request: dict):
     redacted_answer = await generate_text(txtprocess)
     finalanswer = detector.unredact(redacted_answer) 
     detector.clear_values()
-    return {"finalanswer": finalanswer}
+    return {"unredacted": finalanswer, "redacted": redacted_answer}
 
 @app.get("/path/{path_id}")
 async def demo_get_path_id(path_id: int):
