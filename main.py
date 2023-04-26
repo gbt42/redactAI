@@ -86,7 +86,7 @@ class EntityDetector:
         ending = "Remove all the entity information in the output txt."
         for entity, uuidstr in self.full_uuid_map.items():
             txt = txt.replace(entity, uuidstr)
-        for entity, uuidstr in self.entity_name_map.items():
+        for uuidstr, entity in self.entity_name_map.items():
             prompt = prompt.replace(entity, uuidstr)
         txtprocess = txt+ '\n' + custom_replace+ '\n' + prompt+ '\n' + ending 
         self.txtprocess = txtprocess
