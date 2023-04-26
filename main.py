@@ -13,8 +13,9 @@ from dotenv import load_dotenv
 openai_key = os.getenv("OPENAI_API_KEY")
 
 async def generate_text(prompt):
+    # TODO (evazhang612) change the model
     response = openai.ChatCompletion.create(
-        model="gpt-4"
+        model="gpt-4",
         messages=[
             {"role": "user", "content": prompt}
         ]
