@@ -10,10 +10,10 @@ import en_core_web_sm
 import openai
 from dotenv import load_dotenv
 
-openai_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 async def generate_text(prompt):
-    # TODO (evazhang612) change the model
+    # TODO change the model
     response = openai.ChatCompletion.create(
         model="gpt-4",
         messages=[
@@ -23,6 +23,7 @@ async def generate_text(prompt):
     return response.choices[0].message["content"]
 
 # Load the NER model 
+# TODO change the NER
 nlp = en_core_web_sm.load()
 
 app = FastAPI()
@@ -33,8 +34,6 @@ origins = [
     "http://localhost:8000",
     "http://localhost:3000",
     "https://localhost:3000",
-    "https://example.com",
-    "https://www.example.com",
 ]
 
 app.add_middleware(
