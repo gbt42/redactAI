@@ -9,6 +9,7 @@ license = "MIT"
 python = "^3.10"
 fastapi = "^0.80.0"
 uvicorn = "^0.18.3"
+en_core_web_sm = "^3.5.0"
 
 [tool.poetry.dev-dependencies]
 

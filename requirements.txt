@@ -16,4 +16,4 @@ watchfiles==0.18.1
 websockets==10.4
 spacy==3.5.2
 openai==0.27.4
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.5/en_core_web_sm-2.2.5.tar.gz#en_core_web_sm
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0.tar.gz
